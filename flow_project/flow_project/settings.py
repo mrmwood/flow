@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@ld+%3fa__mv&)xi8)n#wd8jn7t+#m6@xbo$(*mb9b@z6=p(bv'
+SECRET_KEY = '@ld+%3fa__mv&)xi8)n#wd8jn7t+#m6@xbo$(*mb9b@z6=p(bva'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'flow_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db2.sqlite'),
     }
 }
 
@@ -119,3 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Creates a new Customer User Model
+AUTH_USER_MODEL = 'flow.CustomUser' # new

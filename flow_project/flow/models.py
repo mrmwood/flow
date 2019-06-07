@@ -1,3 +1,12 @@
+#There are two modern ways to create a custom user
+#model in Django: AbstractUser and AbstractBaseUser.
+#In both cases we can subclass them to extend existing
+#functionality however AbstractBaseUser requires much more work.
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-# Create your models here.
+class CustomUser(AbstractUser):
+    # add additional fields in here
+
+    def __str__(self):
+        return self.email
