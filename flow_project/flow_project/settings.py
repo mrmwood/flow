@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'flow',
+
+    # Local
+    #'flow.apps.FlowConfig', # new
 ]
 
 MIDDLEWARE = [
@@ -77,7 +80,7 @@ WSGI_APPLICATION = 'flow_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db2.sqlite'),
+        'NAME': os.path.join(BASE_DIR, 'db3.sqlite'),
     }
 }
 
@@ -120,5 +123,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#Creates a new Customer User Model
+#Creates a new Custom User Model
 AUTH_USER_MODEL = 'flow.CustomUser' # new
